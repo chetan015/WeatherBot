@@ -1,0 +1,53 @@
+%YAML 1.1
+---
+actions:
+- utter_greeting
+- utter_how_i_am
+- utter_bye
+- utter_its_nice_to_meet_you
+- action_get_weather
+- utter_ask_location
+config:
+  store_entities_as_slots: true
+entities: []
+forms: []
+intents:
+- greeting:
+    use_entities: true
+- how_are_you:
+    use_entities: true
+- bye:
+    use_entities: true
+- my_name_is:
+    use_entities: true
+- get_weather:
+    use_entities: true
+- get_weather_location:
+    use_entities: true
+- location:
+    use_entities: true
+slots:
+  GPE:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  PERSON:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_location:
+  - text: At which Location?
+  - text: Where do you want the weather of?
+  utter_bye:
+  - text: Bye.
+  - text: Good bye.
+  utter_greeting:
+  - text: Hi!
+  - text: Hello, my friend.
+  utter_how_i_am:
+  - text: I am doing ok.
+  - text: I am good.
+  utter_its_nice_to_meet_you:
+  - text: It's nice to meet you, {PERSON}.
+  - text: Nice to meet you, {PERSON}.

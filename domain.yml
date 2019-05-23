@@ -1,0 +1,37 @@
+slots:
+  PERSON:
+    type: text
+  GPE:
+    type: text
+
+intents:
+  - greeting
+  - how_are_you
+  - bye
+  - my_name_is
+  - get_weather
+  - get_weather_location
+  - location
+actions:
+  - utter_greeting
+  - utter_how_i_am
+  - utter_bye
+  - utter_its_nice_to_meet_you
+  - action_get_weather
+  - utter_ask_location
+templates:
+  utter_greeting:
+    - Hi!
+    - Hello, my friend.
+  utter_how_i_am:
+    - I am doing ok.
+    - I am good.
+  utter_bye:
+    - Bye.
+    - Good bye.
+  utter_its_nice_to_meet_you:
+    - It's nice to meet you, {PERSON}.
+    - Nice to meet you, {PERSON}.
+  utter_ask_location:
+    - At which Location?
+    - Where do you want the weather of?

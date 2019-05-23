@@ -1,0 +1,2089 @@
+Rasa process starting
+Rasa process starting
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Rasa process starting
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'what's the weather in auckland' with intent '{'name': 'get_weather', 'confidence': 0.6176247874965177}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '11'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_get_weather' with prob 1.00.
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+The model predicted the custom action 'action_get_weather' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 325, in run
+    "".format(self.name(), DOCS_BASE_URL))
+Exception: The model predicted the custom action 'action_get_weather' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'What's the weather in Auckland?' with intent '{'name': 'get_weather', 'confidence': 0.5401700041128458}' and entities '[{'entity': 'GPE', 'value': 'Auckland', 'start': 22, 'confidence': None, 'end': 30, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: Auckland
+	PERSON: None
+Current tracker state [None, None, None, {}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.72.
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+The model predicted the custom action 'action_get_weather' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 325, in run
+    "".format(self.name(), DOCS_BASE_URL))
+Exception: The model predicted the custom action 'action_get_weather' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa Core server is up and running on http://localhost:5005
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa Core server is up and running on http://localhost:5005
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 404. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 404 Client Error: NOT FOUND for url: http://localhost:5055/
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'What's the weather in Auckland' with intent '{'name': 'get_weather', 'confidence': 0.6171597480441565}' and entities '[{'entity': 'GPE', 'value': 'Auckland', 'start': 22, 'confidence': None, 'end': 30, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: Auckland
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_get_weather': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.72.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 404. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 404 Client Error: NOT FOUND for url: http://localhost:5055/
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: NOT FOUND for url: http://localhost:5055/
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_get_weather': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'entity_GPE': 1.0}, {'intent_get_weather': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'What's the weather in auckland?' with intent '{'name': 'get_weather', 'confidence': 0.5401700041128458}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_get_weather': 1.0}]
+There is a memorised next action '11'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_get_weather' with prob 1.00.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'Hi I am Chetan' with intent '{'name': 'my_name_is', 'confidence': 0.46535104122981547}' and entities '[{'entity': 'PERSON', 'value': 'Chetan', 'start': 8, 'confidence': None, 'end': 14, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: None
+	PERSON: Chetan
+Current tracker state [None, None, None, {}, {'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.82.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: Nice to meet you, Chetan., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_PERSON': 1.0, 'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.98.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Auckland?' with intent '{'name': 'get_weather', 'confidence': 0.5401700041128458}' and entities '[{'entity': 'GPE', 'value': 'Auckland', 'start': 22, 'confidence': None, 'end': 30, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	GPE: Auckland
+	PERSON: Chetan
+Current tracker state [None, {}, {'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_PERSON': 1.0, 'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.91.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [{}, {'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_PERSON': 1.0, 'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Whats the weather' with intent '{'name': 'get_weather', 'confidence': 0.636563775322415}' and entities '[]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	GPE: Auckland
+	PERSON: Chetan
+Current tracker state [{'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_PERSON': 1.0, 'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [{'entity_PERSON': 1.0, 'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_PERSON_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'What's the weather in Bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'Bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: None
+Current tracker state [None, None, None, {}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.72.
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+The model predicted the custom action 'action_get_weather' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 325, in run
+    "".format(self.name(), DOCS_BASE_URL))
+Exception: The model predicted the custom action 'action_get_weather' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'what's the weather in bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: bangalore
+	PERSON: None
+Current tracker state [None, None, None, {}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.72.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: Its quite hot, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'entity_GPE': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'whats the weather in bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5073496762760297}' and entities '[{'entity': 'GPE', 'value': 'bangalore', 'start': 21, 'confidence': None, 'end': 30, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: bangalore
+	PERSON: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.72.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather in bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 7 events
+Current slot values: 
+	GPE: bangalore
+	PERSON: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.92.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather in bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	GPE: bangalore
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '['SlotSet(key: location, value: bangalore)']'
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Bangalore at the moment. The temperature is 35.0 degrees, the humidity is 15% and the wind speed is 8.1 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Current tracker state [{'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Received user message 'What's the weather in Manchester?' with intent '{'name': 'get_weather', 'confidence': 0.5373688115656501}' and entities '[{'entity': 'GPE', 'value': 'Manchester', 'start': 22, 'confidence': None, 'end': 32, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 17 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Current tracker state [{'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Overcast in Manchester at the moment. The temperature is 7.0 degrees, the humidity is 53% and the wind speed is 9.4 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Current tracker state [{'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Tried to set non existent slot 'location'. Make sure you added all your slots to your domain file.
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'hi' with intent '{'name': 'greeting', 'confidence': 0.7576826757986289}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_greeting' with prob 1.00.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hi!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Bye' with intent '{'name': 'bye', 'confidence': 0.6858338289669275}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}]
+There is a memorised next action '9'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_bye' with prob 1.00.
+Action 'utter_bye' ended with events '[]'
+Bot utterance 'BotUttered(text: Bye., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'bye' with intent '{'name': 'bye', 'confidence': 0.6858338289669275}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}]
+There is a memorised next action '9'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_bye' with prob 1.00.
+Action 'utter_bye' ended with events '[]'
+Bot utterance 'BotUttered(text: Good bye., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Chennai' with intent '{'name': 'get_weather', 'confidence': 0.6055012729195302}' and entities '[{'entity': 'GPE', 'value': 'Chennai', 'start': 22, 'confidence': None, 'end': 29, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 15 events
+Current slot values: 
+	GPE: Chennai
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Chennai at the moment. The temperature is 34.0 degrees, the humidity is 50% and the wind speed is 11.9 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_bye': 1.0, 'prev_utter_bye': 1.0}, {'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'intent_bye': 1.0, 'prev_utter_bye': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, OPTIONS, GET, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'hi' with intent '{'name': 'greeting', 'confidence': 0.7576826757986289}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_greeting' with prob 1.00.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hi!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'whats the weather in bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5073496762760297}' and entities '[{'entity': 'GPE', 'value': 'bangalore', 'start': 21, 'confidence': None, 'end': 30, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 7 events
+Current slot values: 
+	GPE: bangalore
+	PERSON: None
+Current tracker state [None, {}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.92.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Bangalore at the moment. The temperature is 34.0 degrees, the humidity is 16% and the wind speed is 10.5 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'entity_GPE': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'hi' with intent '{'name': 'greeting', 'confidence': 0.7576826757986289}' and entities '[]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	GPE: bangalore
+	PERSON: None
+Current tracker state [{'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'entity_GPE': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0}, {'slot_GPE_0': 1.0, 'intent_greeting': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_greeting' with prob 0.93.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hi!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'entity_GPE': 1.0}, {'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0}, {'slot_GPE_0': 1.0, 'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'What's the weather in Bangalore' with intent '{'name': 'get_weather', 'confidence': 0.6055012729195302}' and entities '[{'entity': 'GPE', 'value': 'Bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.72.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x151795390>: Failed to establish a new connection: [Errno 61] Connection refused',))
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x151795390>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x151795390>: Failed to establish a new connection: [Errno 61] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 331, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/utils.py", line 667, in request
+    **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x151795390>: Failed to establish a new connection: [Errno 61] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 352, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '/sto/stop' with intent '{'name': 'sto/stop', 'confidence': 1.0}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: None
+Current tracker state [None, {}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'intent_sto/stop': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'intent_sto/stop' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.29.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: It's nice to meet you, None., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'intent_sto/stop': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_sto/stop': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'intent_sto/stop' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'intent_sto/stop' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'what's the weather in bangalore' with intent '{'name': 'get_weather', 'confidence': 0.6055012729195302}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '11'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_get_weather' with prob 1.00.
+Calling action endpoint to run action 'action_get_weather'.
+Failed to run custom action 'action_get_weather'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_get_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 342, in run
+    response.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 346, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 362, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_get_weather' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather in Delhi?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'Delhi', 'start': 22, 'confidence': None, 'end': 27, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	GPE: Delhi
+	PERSON: None
+Current tracker state [None, {}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.92.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Mist in Delhi at the moment. The temperature is 34.0 degrees, the humidity is 28% and the wind speed is 6.9 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather in Manchester' with intent '{'name': 'get_weather', 'confidence': 0.6153441458692925}' and entities '[{'entity': 'GPE', 'value': 'Manchester', 'start': 22, 'confidence': None, 'end': 32, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Overcast in Manchester at the moment. The temperature is 8.0 degrees, the humidity is 46% and the wind speed is 9.4 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_get_weather': 1.0, 'prev_action_get_weather': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, GET, HEAD, POST       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'hi' with intent '{'name': 'greeting', 'confidence': 0.7576826757986289}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_greeting' with prob 1.00.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello, my friend., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Manchester?' with intent '{'name': 'get_weather', 'confidence': 0.5373688115656501}' and entities '[{'entity': 'GPE', 'value': 'Manchester', 'start': 22, 'confidence': None, 'end': 32, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 7 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.92.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Overcast in Manchester at the moment. The temperature is 8.0 degrees, the humidity is 46% and the wind speed is 9.4 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather in Bengaluru?' with intent '{'name': 'get_weather', 'confidence': 0.5397924016206385}' and entities '[{'entity': 'GPE', 'value': 'Bengaluru', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 12 events
+Current slot values: 
+	GPE: Bengaluru
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Bengaluru at the moment. The temperature is 31.0 degrees, the humidity is 18% and the wind speed is 10.5 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather in Bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'Bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 17 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: None
+Current tracker state [{'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Bangalore at the moment. The temperature is 31.0 degrees, the humidity is 18% and the wind speed is 10.5 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Bye' with intent '{'name': 'bye', 'confidence': 0.6858338289669275}' and entities '[]'
+Logged UserUtterance - tracker now has 21 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: None
+Current tracker state [{'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_bye': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_bye' with prob 0.96.
+Action 'utter_bye' ended with events '[]'
+Bot utterance 'BotUttered(text: Bye., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0, 'intent_bye': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'I am chetan' with intent '{'name': 'my_name_is', 'confidence': 0.5928231106068385}' and entities '[]'
+Logged UserUtterance - tracker now has 25 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: None
+Current tracker state [{'slot_GPE_0': 1.0, 'entity_GPE': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0, 'intent_bye': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.96.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: It's nice to meet you, None., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'slot_GPE_0': 1.0, 'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_bye': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0, 'intent_bye': 1.0}, {'slot_GPE_0': 1.0, 'prev_action_listen': 1.0, 'intent_my_name_is': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, HEAD, GET, POST       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'Hi' with intent '{'name': 'greeting', 'confidence': 0.7576826757986289}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_greeting' with prob 1.00.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hi!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Hi, I am Chetan' with intent '{'name': 'my_name_is', 'confidence': 0.4613414620745398}' and entities '[{'entity': 'PERSON', 'value': 'Chetan', 'start': 9, 'confidence': None, 'end': 15, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 7 events
+Current slot values: 
+	GPE: None
+	PERSON: Chetan
+Current tracker state [None, {}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'prev_action_listen': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.97.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: Nice to meet you, Chetan., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'prev_action_listen': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Bangalore?' with intent '{'name': 'get_weather', 'confidence': 0.5218759225250894}' and entities '[{'entity': 'GPE', 'value': 'Bangalore', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 12 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: Chetan
+Current tracker state [{'intent_greeting': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'prev_action_listen': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Bangalore at the moment. The temperature is 34.0 degrees, the humidity is 18% and the wind speed is 0.0 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_greeting': 1.0, 'prev_utter_greeting': 1.0}, {'prev_action_listen': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Bye' with intent '{'name': 'bye', 'confidence': 0.6858338289669275}' and entities '[]'
+Logged UserUtterance - tracker now has 16 events
+Current slot values: 
+	GPE: Bangalore
+	PERSON: Chetan
+Current tracker state [{'prev_action_listen': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_bye': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_bye' with prob 0.96.
+Action 'utter_bye' ended with events '[]'
+Bot utterance 'BotUttered(text: Good bye., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_its_nice_to_meet_you': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0, 'intent_my_name_is': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_bye': 1.0}, {'slot_PERSON_0': 1.0, 'prev_utter_bye': 1.0, 'slot_GPE_0': 1.0, 'intent_bye': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, POST, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'What' with intent '{'name': 'how_are_you', 'confidence': 0.5782331380602862}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_how_i_am' with prob 1.00.
+Action 'utter_how_i_am' ended with events '[]'
+Bot utterance 'BotUttered(text: I am doing ok., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What' with intent '{'name': 'how_are_you', 'confidence': 0.5782331380602862}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, {}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_how_i_am' with prob 1.00.
+Action 'utter_how_i_am' ended with events '[]'
+Bot utterance 'BotUttered(text: I am good., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What is the weather in Manchester' with intent '{'name': 'get_weather', 'confidence': 0.5976797306972702}' and entities '[{'entity': 'GPE', 'value': 'Manchester', 'start': 23, 'confidence': None, 'end': 33, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.92.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 7.0 degrees, the humidity is 70% and the wind speed is 8.1 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Hi' with intent '{'name': 'greeting', 'confidence': 0.7576826757986289}' and entities '[]'
+Logged UserUtterance - tracker now has 15 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'intent_how_are_you': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_greeting' with prob 0.93.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello, my friend., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_how_i_am': 1.0, 'intent_how_are_you': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_greeting': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Bye' with intent '{'name': 'bye', 'confidence': 0.6858338289669275}' and entities '[]'
+Logged UserUtterance - tracker now has 19 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_greeting': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_bye' with prob 0.95.
+Action 'utter_bye' ended with events '[]'
+Bot utterance 'BotUttered(text: Bye., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_greeting': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What is the weather in Manchester' with intent '{'name': 'get_weather', 'confidence': 0.5976797306972702}' and entities '[{'entity': 'GPE', 'value': 'Manchester', 'start': 23, 'confidence': None, 'end': 33, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 24 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_greeting': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.93.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 7.0 degrees, the humidity is 70% and the wind speed is 8.1 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_greeting': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_greeting': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Hi I am Chetan Surana' with intent '{'name': 'my_name_is', 'confidence': 0.47538652700169226}' and entities '[{'entity': 'PERSON', 'value': 'Chetan Surana', 'start': 8, 'confidence': None, 'end': 21, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 29 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Chetan Surana
+Current tracker state [{'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_action_listen': 1.0}, {'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.97.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: Nice to meet you, Chetan Surana., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_bye': 1.0, 'slot_GPE_0': 1.0, 'prev_utter_bye': 1.0}, {'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Hi I am Chetan Surana Rajender Kumar Surana' with intent '{'name': 'my_name_is', 'confidence': 0.47674545102829247}' and entities '[{'entity': 'PERSON', 'value': 'Chetan Surana', 'start': 8, 'confidence': None, 'end': 21, 'extractor': 'ner_spacy'}, {'entity': 'PERSON', 'value': 'Rajender Kumar Surana', 'start': 22, 'confidence': None, 'end': 43, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 34 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Rajender Kumar Surana
+Current tracker state [{'entity_GPE': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0, 'prev_action_listen': 1.0}, {'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}, {'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.97.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: Nice to meet you, Rajender Kumar Surana., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'entity_GPE': 1.0, 'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'intent_get_weather': 1.0}, {'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}, {'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'slot_GPE_0': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'Hi I am Chetan' with intent '{'name': 'my_name_is', 'confidence': 0.387135623357112}' and entities '[{'entity': 'PERSON', 'value': 'Chetan', 'start': 8, 'confidence': None, 'end': 14, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 3 events
+Current slot values: 
+	GPE: None
+	PERSON: Chetan
+Current tracker state [None, None, None, {}, {'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.96.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: It's nice to meet you, Chetan., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Bengaluru?' with intent '{'name': 'get_weather_location', 'confidence': 0.35016688855031003}' and entities '[{'entity': 'GPE', 'value': 'Bengaluru', 'start': 22, 'confidence': None, 'end': 31, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	GPE: Bengaluru
+	PERSON: Chetan
+Current tracker state [None, {}, {'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}, {'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Bengaluru at the moment. The temperature is 35.0 degrees, the humidity is 15% and the wind speed is 8.1 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}, {'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'what's the weather' with intent '{'name': 'get_weather', 'confidence': 0.47185119833289024}' and entities '[]'
+Logged UserUtterance - tracker now has 12 events
+Current slot values: 
+	GPE: Bengaluru
+	PERSON: Chetan
+Current tracker state [{'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}, {'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_ask_location' with prob 0.99.
+Action 'utter_ask_location' ended with events '[]'
+Bot utterance 'BotUttered(text: Where do you want the weather of?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_its_nice_to_meet_you': 1.0, 'intent_my_name_is': 1.0, 'entity_PERSON': 1.0, 'slot_PERSON_0': 1.0}, {'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Czech Republic' with intent '{'name': 'location', 'confidence': 0.5358646123234174}' and entities '[{'start': 0, 'end': 14, 'value': 'Prague', 'entity': 'GPE', 'confidence': 0.8764935094029975, 'extractor': 'ner_crf', 'processors': ['ner_synonyms']}, {'entity': 'NORP', 'value': 'Czech', 'start': 0, 'confidence': None, 'end': 5, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 17 events
+Current slot values: 
+	GPE: Prague
+	PERSON: Chetan
+Current tracker state [{'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'entity_NORP': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_location': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_NORP' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Prague at the moment. The temperature is 10.0 degrees, the humidity is 40% and the wind speed is 0.0 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0, 'entity_GPE': 1.0}, {'intent_get_weather': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'intent_get_weather': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0}, {'entity_NORP': 1.0, 'prev_action_listen': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_location': 1.0, 'entity_GPE': 1.0}, {'entity_NORP': 1.0, 'prev_action_get_weather': 1.0, 'slot_PERSON_0': 1.0, 'slot_GPE_0': 1.0, 'intent_location': 1.0, 'entity_GPE': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_NORP' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_NORP' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, OPTIONS, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'Hi' with intent '{'name': 'greeting', 'confidence': 0.6957065518502755}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_greeting' with prob 1.00.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hi!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Hi' with intent '{'name': 'greeting', 'confidence': 0.6957065518502755}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_greeting' with prob 1.00.
+Action 'utter_greeting' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello, my friend., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'how are you' with intent '{'name': 'how_are_you', 'confidence': 0.4698593383221486}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+	GPE: None
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_how_are_you': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'utter_how_i_am' with prob 1.00.
+Action 'utter_how_i_am' ended with events '[]'
+Bot utterance 'BotUttered(text: I am good., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_utter_how_i_am': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_0_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Montreal?' with intent '{'name': 'get_weather_location', 'confidence': 0.33579362543462604}' and entities '[{'entity': 'GPE', 'value': 'Montreal', 'start': 22, 'confidence': None, 'end': 30, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 15 events
+Current slot values: 
+	GPE: Montreal
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greeting': 1.0}, {'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_utter_how_i_am': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Partly cloudy in Montreal at the moment. The temperature is 3.0 degrees, the humidity is 70% and the wind speed is 18.6 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greeting': 1.0, 'intent_greeting': 1.0}, {'prev_action_listen': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_utter_how_i_am': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'What's the weather in Manchester?' with intent '{'name': 'get_weather_location', 'confidence': 0.340899273259643}' and entities '[{'entity': 'GPE', 'value': 'Manchester', 'start': 22, 'confidence': None, 'end': 32, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 20 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_how_are_you': 1.0}, {'intent_how_are_you': 1.0, 'prev_utter_how_i_am': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_how_are_you': 1.0, 'prev_utter_how_i_am': 1.0}, {'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'How is the weather in bangalore' with intent '{'name': 'get_weather_location', 'confidence': 0.37368880887133027}' and entities '[]'
+Logged UserUtterance - tracker now has 24 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: None
+Current tracker state [{'prev_action_listen': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'entity_GPE': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph.' with intent '{'name': 'get_weather_location', 'confidence': 0.2545149599408538}' and entities '[{'entity': 'PERSON', 'value': 'Manchester', 'start': 0, 'confidence': None, 'end': 10, 'extractor': 'ner_spacy'}, {'entity': 'QUANTITY', 'value': '13.0 degrees', 'start': 45, 'confidence': None, 'end': 57, 'extractor': 'ner_spacy'}, {'entity': 'PERCENT', 'value': '67%', 'start': 75, 'confidence': None, 'end': 78, 'extractor': 'ner_spacy'}, {'entity': 'QUANTITY', 'value': '4.3 mph', 'start': 101, 'confidence': None, 'end': 108, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 29 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'entity_GPE': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}]
+There is no memorised next action
+Feature 'entity_GPE' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 33 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.25.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: Nice to meet you, Manchester., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_GPE_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 37 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_ask_location' with prob 0.20.
+Action 'utter_ask_location' ended with events '[]'
+Bot utterance 'BotUttered(text: At which Location?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 41 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.45.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 45 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.21.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: Nice to meet you, Manchester., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 49 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.21.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph.' with intent '{'name': 'get_weather_location', 'confidence': 0.2545149599408538}' and entities '[{'entity': 'PERSON', 'value': 'Manchester', 'start': 0, 'confidence': None, 'end': 10, 'extractor': 'ner_spacy'}, {'entity': 'QUANTITY', 'value': '13.0 degrees', 'start': 45, 'confidence': None, 'end': 57, 'extractor': 'ner_spacy'}, {'entity': 'PERCENT', 'value': '67%', 'start': 75, 'confidence': None, 'end': 78, 'extractor': 'ner_spacy'}, {'entity': 'QUANTITY', 'value': '4.3 mph', 'start': 101, 'confidence': None, 'end': 108, 'extractor': 'ner_spacy'}]'
+Logged UserUtterance - tracker now has 54 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.99.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 58 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.26.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: It's nice to meet you, Manchester., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 62 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'entity_QUANTITY': 1.0, 'prev_action_listen': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_ask_location' with prob 0.20.
+Action 'utter_ask_location' ended with events '[]'
+Bot utterance 'BotUttered(text: Where do you want the weather of?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'entity_QUANTITY': 1.0, 'prev_action_get_weather': 1.0, 'intent_get_weather_location': 1.0, 'slot_PERSON_0': 1.0, 'entity_PERSON': 1.0, 'slot_GPE_0': 1.0, 'entity_PERCENT': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Feature 'entity_QUANTITY' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERSON' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_PERCENT' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 66 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.45.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 70 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'utter_its_nice_to_meet_you' with prob 0.21.
+Action 'utter_its_nice_to_meet_you' ended with events '[]'
+Bot utterance 'BotUttered(text: It's nice to meet you, Manchester., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'slot_GPE_0': 1.0, 'prev_utter_ask_location': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 74 events
+Current slot values: 
+	GPE: Manchester
+	PERSON: Manchester
+Current tracker state [{'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_get_weather' with prob 0.21.
+Calling action endpoint to run action 'action_get_weather'.
+Action 'action_get_weather' ended with events '[]'
+Bot utterance 'BotUttered(text: It is currently Sunny in Manchester at the moment. The temperature is 13.0 degrees, the humidity is 67% and the wind speed is 4.3 mph., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_its_nice_to_meet_you': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}, {'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_get_weather': 1.0, 'slot_GPE_0': 1.0, 'slot_PERSON_0': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'

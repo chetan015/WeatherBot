@@ -1,0 +1,195 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greeting",
+        "text": "hey"
+      },
+      {
+        "intent": "greeting",
+        "text": "hello"
+      },
+      {
+        "intent": "greeting",
+        "text": "hi"
+      },
+      {
+        "intent": "greeting",
+        "text": "heya"
+      },
+      {
+        "intent": "how_are_you",
+        "text": "how are you"
+      },
+      {
+        "intent": "how_are_you",
+        "text": "how is it going"
+      },
+      {
+        "intent": "how_are_you",
+        "text": "how is life"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "good bye"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "Martin",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "I am Martin"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Jack",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "I am Jack"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 4,
+            "end": 10,
+            "value": "Steven",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "I'm Steven"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "Jack",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "im Jack"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 11,
+            "end": 23,
+            "value": "Martin Novak",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "My name is Martin Novak"
+      },
+      {
+        "intent": "get_weather",
+        "text": "what's the weather"
+      },
+      {
+        "intent": "get_weather",
+        "text": "what is the weather"
+      },
+      {
+        "intent": "get_weather",
+        "text": "whats the weather"
+      },
+      {
+        "intent": "get_weather_location",
+        "entities": [
+          {
+            "start": 22,
+            "end": 36,
+            "value": "Czech Republic",
+            "entity": "GPE"
+          }
+        ],
+        "text": "what's the weather in Czech Republic"
+      },
+      {
+        "intent": "get_weather_location",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "New Zealand",
+            "entity": "GPE"
+          }
+        ],
+        "text": "what is the weather in New Zealand"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Czech Republic",
+            "entity": "GPE"
+          }
+        ],
+        "text": "Czech Republic"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "New Zealand",
+            "entity": "GPE"
+          }
+        ],
+        "text": "New Zealand"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 16,
+            "end": 27,
+            "value": "New Zealand",
+            "entity": "GPE"
+          }
+        ],
+        "text": "The location is New Zealand"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": [
+      {
+        "value": "Prague",
+        "synonyms": [
+          "Czech Republic",
+          "Czechia",
+          "CR",
+          "CZ"
+        ]
+      },
+      {
+        "value": "Auckland",
+        "synonyms": [
+          "New Zealand",
+          "NZ",
+          "Zealand"
+        ]
+      }
+    ]
+  }
+}
